@@ -11,3 +11,4 @@ POST /create: Handle the creation of a new blog post.
 GET /edit/:id: Render the edit page with the form pre-filled with the current post's data.
 POST /edit/:id: Handle the submission of the edited blog post.
 POST /delete/:id: Handle the deletion of a blog post.
+

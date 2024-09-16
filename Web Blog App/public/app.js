@@ -24,3 +24,7 @@ app.post('/create', (req, res) => {
   posts.push(newPost);
   res.redirect('/');
 });
+
+app.get('/', (req, res) => {
+  res.render('index', { posts });
+});

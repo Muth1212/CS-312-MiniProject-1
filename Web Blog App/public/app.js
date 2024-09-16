@@ -28,3 +28,8 @@ app.post('/create', (req, res) => {
 app.get('/', (req, res) => {
   res.render('index', { posts });
 });
+
+app.get('/edit/:id', (req, res) => {
+  const post = posts.find(p => p.id === req.params.id);
+  res.render('edit', { post });
+});

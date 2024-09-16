@@ -42,3 +42,9 @@ app.post('/edit/:id', (req, res) => {
   post.author = author;
   res.redirect('/');
 });
+
+app.post('/delete/:id', (req, res) => {
+  posts = posts.filter(post => post.id !== req.params.id);
+  res.redirect('/');
+});
+

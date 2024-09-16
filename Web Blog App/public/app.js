@@ -33,3 +33,12 @@ app.get('/edit/:id', (req, res) => {
   const post = posts.find(p => p.id === req.params.id);
   res.render('edit', { post });
 });
+
+app.post('/edit/:id', (req, res) => {
+  const { title, content, author } = req.body;
+  const post = posts.find(p => p.id === req.params.id);
+  post.title = title;
+  post.content = content;
+  post.author = author;
+  res.redirect('/');
+});
